@@ -10,6 +10,11 @@ This script follows LangChain 1.3.9 best practices:
 import os
 from pathlib import Path
 
+# Fix SSL certificate issue on macOS
+import certifi
+os.environ.setdefault("SSL_CERT_FILE", certifi.where())
+os.environ.setdefault("REQUESTS_CA_BUNDLE", certifi.where())
+
 from dotenv import load_dotenv
 from langchain_community.document_loaders import PyPDFLoader
 from langchain_text_splitters import RecursiveCharacterTextSplitter

@@ -1,4 +1,10 @@
+import os
 from pathlib import Path
+
+# Fix SSL certificate issue on macOS
+import certifi
+os.environ.setdefault("SSL_CERT_FILE", certifi.where())
+os.environ.setdefault("REQUESTS_CA_BUNDLE", certifi.where())
 
 from dotenv import load_dotenv
 from langchain_google_genai import (
