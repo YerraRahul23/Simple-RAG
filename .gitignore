@@ -1,2 +1,23 @@
+
+# Environment variables
 .env
-venv
+
+# Python virtual environment
+venv/
+.venv/
+env/
+
+# Python cache & compiles
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+
+# Local data & Vector DB index
+faiss_index/
+data/*.pdf
+
+# OS metadata
+.DS_Store
+Thumbs.db
