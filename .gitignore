@@ -5,7 +5,6 @@
 # Python virtual environment
 venv/
 .venv/
-env/
 
 # Python cache & compiles
 __pycache__/
